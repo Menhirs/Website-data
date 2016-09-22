@@ -1,0 +1,11 @@
+{
+    "id":       "robotique",
+    "title":    "Actions autour de la robotique",
+    "template": "",
+    "columns":  2,
+    "articles": [
+        "robotique-materiels"
+    ],
+    "scripts": [
+    ]
+}

@@ -1,0 +1,86 @@
+
+/***************************************************
+			    Publications containers
+***************************************************/
+
+.publis {
+}
+
+.publi {
+	background: rgb(218, 218, 218);
+	-webkit-border-top-left-radius: 20px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-topleft: 20px;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 10px;
+}
+
+.publi_thumbnail {
+	float: left;
+	width: 100px;
+}
+
+.publi_details {
+	border-left: 1px solid #A3A3A3;
+	padding-left: 5px;
+	padding-top: 5px;
+	line-height: 1em;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.publi_details span {
+	line-height: 1em;
+}
+
+.publi_separator {
+	clear:both;
+	margin-bottom:2px;
+}
+
+.publi_detail {
+	float: left;
+	padding-bottom: 2px;
+	clear: both;
+}
+
+span.publi_title {
+}
+
+span.publi_authors {
+}
+
+span.publi_author {
+	padding-right: 0.5em;
+}
+
+span.publi_data {
+}
+
+span.publi_year {
+}
+
+span.publi_where {
+}
+
+span.publi_dwnlds {
+}
+
+a.publi_dwnld {
+	padding-right: 0.25em;
+}
+
+.icon {
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.icon_pdf {
+	background-image: url(../images/icon-pdf.png); 
+}
+.icon_bib {
+	background-image: url(../images/icon-bib.png);
+}

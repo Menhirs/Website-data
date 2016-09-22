@@ -1,0 +1,14 @@
+<div class="logo"></div>
+<div class="title">
+    <h1><%- @title %></h1>
+    <h2><%- @subtitle %></h2>
+</div>
+<div class="navigation">
+    <nav id="siteMenu"> 
+    <ul>
+<% for link in @navigation : %>
+        <li><span class="innerLink" id="<%- link.link %>"><%- link.name %></span></li>
+<% end %>
+    </ul>
+    </nav>
+</div>

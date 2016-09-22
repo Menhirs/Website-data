@@ -1,0 +1,35 @@
+{
+    "title": "Plateforme Menhirs du département informatique, Université Lyon 1",
+    "port": 1337,
+    "directory": "",
+    "subdirectories": {
+        "static": "public",
+        "descriptors": "",
+        "templates": "templates",
+        "pages": "pages",
+        "articles": "articles",
+        "scripts": "js"
+    },
+    "templateEngine": {
+        "name": "ect",
+        "config": {
+            "cache": false,
+            "watch": true,
+            "root": "%TPLDIRECTORY%",
+            "ext" : ".ect"
+        }
+    },
+    "header": {
+        "title": "MENHIRS : Modèles et Environnements Numériques autour de l'Humain,",
+        "subtitle": "Interaction, Robotique et Simulation",
+        "navigation": [
+            { "link": "index", "name": "Accueil" },
+            { "link": "robotique", "name": "Robotique" },
+            { "link": "interaction", "name": "Interaction" },
+            { "link": "html5", "name": "HTML 5" },
+            { "link": "webgl", "name": "WebGL" },
+            { "link": "various", "name": "Divers" },
+            { "link": "animation", "name": "Animation" }
+        ]
+    }
+}

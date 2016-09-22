@@ -1,0 +1,6 @@
+{
+    "id":       "menhirs-gallery",
+    "title":    "Gallerie de la salle",
+    "template": "menhirs-gallery",
+    "type":     "gallery"
+}

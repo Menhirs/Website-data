@@ -1,0 +1,6 @@
+{
+    "id":       "menhirs-description",
+    "title":    "Description de la salle",
+    "template": "menhirs-description",
+    "type":     "text"
+}

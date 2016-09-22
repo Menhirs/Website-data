@@ -1,0 +1,6 @@
+{
+    "id":       "no-content",
+    "title":    "Content not found",
+    "template": "nocontent",
+    "type":     "text"
+}

@@ -1,0 +1,118 @@
+
+/***************************************************
+				       MENU
+***************************************************/
+
+/***************************************************
+				   Vendor menu
+***************************************************/
+
+#siteNavigation {
+	padding-left: 0px;
+}
+
+.siteNavItem {
+	float: left;
+	margin-left: 8px;
+	margin-right: 8px;
+	line-height: normal;
+	list-style: none;
+}
+
+.siteNavItem a {
+	font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+	color: #666666;
+	font-weight: normal;
+	display: block;	/* IE6, IE7 line height fix */
+	padding-bottom: 10px;
+	padding-top: 5px;
+	background-color: transparent;
+	margin-top: 5px;
+	margin-right: 6px;
+   text-decoration: none;
+}
+
+.siteNavItem a: hover {
+	color: #33CC99;
+}
+
+.siteNavItem a.current {
+	color: #CC3333;
+}
+
+/***************************************************
+				   Page toc
+***************************************************/
+
+span.toc {
+	position: relative;
+	float: left;
+	width: auto;
+	background: transparent;
+}
+
+ul.controllerNav {
+	padding-left: 0px;
+}
+
+ul.controllerNav li {
+	float: left;
+	margin-left: 2px;
+	margin-right: 2px;
+	line-height: normal;
+	list-style: none;
+}
+
+
+ul.controllerNav li a {
+	font-size: 12px;
+   font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	display: block;	/* IE6, IE7 line height fix */
+   text-decoration: none;
+}
+
+ul.controllerNav li a: hover {
+   color: #33CC99;
+}
+
+ul.controllerNav li a.current {
+	color: #CC3333;
+}
+
+/***************************************************
+				   Language Selector
+***************************************************/
+
+#languageSelector {
+	padding: 0px;
+	margin: 0px;
+	margin-right: 10px;
+}
+
+.languageSelectorItem {
+	float: right;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.languageSelectorItem a {
+	display: block;	/* IE6, IE7 line height fix */
+	padding: 0px;
+	margin: 0px;
+	margin-top: 10px;
+	margin-right: 5px;
+	width: 16px;
+	height: 11px;
+	background-repeat: no-repeat;
+}
+
+a#fr {
+	background-image: url(../images/flags/fr.png);
+}
+
+a#en {
+	background-image: url(../images/flags/gb.png);
+}

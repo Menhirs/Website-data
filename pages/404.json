@@ -1,0 +1,13 @@
+{
+    "id":       "404",
+    "title":    "",
+    "template": "",
+    "columns": 3,
+    "articles": [
+        "blank",
+        "404",
+        "blank"
+    ],
+    "scripts": [
+    ]
+}

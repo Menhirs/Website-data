@@ -1,0 +1,56 @@
+
+/***************************************************
+			    Main containers
+***************************************************/
+
+.merge3 {
+	/*width: 950px;*/
+	-moz-column-count: 3; /* Firefox */
+	-webkit-column-count: 3; /* Safari and Chrome */
+	column-count: 3;
+	/*	
+	-moz-column-gap: 30px;
+	-webkit-column-gap: 30px;
+	column-gap: 30px;	
+	*/
+	-moz-column-rule: 1px solid #A3A3A3;
+	-webkit-column-rule: 1px solid #A3A3A3;
+	column-rule: 1px solid #A3A3A3;
+}
+
+.merge2 {
+	/*width: 950px;*/
+	-moz-column-count: 2; /* Firefox */
+	-webkit-column-count: 2; /* Safari and Chrome */
+	column-count: 2;	
+	/*
+	-moz-column-gap: 30px;
+	-webkit-column-gap: 30px;
+	column-gap: 30px;
+	*/
+	-moz-column-rule: 1px solid #A3A3A3;
+	-webkit-column-rule: 1px solid #A3A3A3;
+	column-rule: 1px solid #A3A3A3;
+}
+
+.merge1 {
+	width: 950px;
+}
+
+.split3_merge2 {
+	width: 622px;
+}
+
+.split3 {
+	width: 296px;
+}
+
+.split2 {
+	width: 460px;
+}
+	
+	
+/***************************************************
+				INTRO
+***************************************************/	
+	

@@ -1,0 +1,44 @@
+{
+    "id":       "index",
+    "title":    "Introduction",
+    "template": "",
+    "columns":  2,
+    "articles": [
+        "menhirs-description",
+        "menhirs-gallery",
+        "teaching-platforms",
+        "research-platforms"
+    ],
+    "content": [
+        {
+            "type": "col",
+            "size": "half",
+            "content": [
+                {
+                    "type": "art",
+                    "ref": "menhirs-description"
+                },
+                {
+                    "type": "art",
+                    "ref": "teaching-platforms"
+                }
+            ] 
+        },
+        {
+            "type": "col",
+            "size": "half",
+            "content": [
+                {
+                    "type": "gal",
+                    "ref": "menhirs-gallery"
+                },
+                {
+                    "type": "art",
+                    "ref": "research-platforms"
+                }
+            ] 
+        }
+    ],
+    "scripts": [
+    ]
+}

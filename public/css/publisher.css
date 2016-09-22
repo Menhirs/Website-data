@@ -1,0 +1,55 @@
+.block-row, .block-column, .block-article {
+    /*
+    padding: 0px;
+    margin: 0px;
+    */
+    /*
+    padding: 2px;
+    margin: 2px;
+    */
+}
+
+.block-sortable {
+}
+
+.row-wrapper {
+    border: 0px solid #6060C3;
+    padding-top: 5px;
+}
+
+.column-wrapper {
+    border: 0px dashed #60C360;
+}
+
+.article-wrapper {
+    border: 0px dashed #C36060;
+}
+
+.block-row {
+}
+
+.block-column {
+	width: 100%;
+	min-width: 100%;
+}
+
+.block-article {
+}
+
+.page-wrapper {
+}
+
+.row-wrapper {
+	clear: both;
+	/*
+	margin-bottom: 5px;
+	*/
+}
+
+.column-wrapper {
+	float: left;
+	position: relative;
+}
+
+.article-wrapper {
+}

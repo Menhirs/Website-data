@@ -1,0 +1,6 @@
+{
+    "id":       "404",
+    "title":    "404 error",
+    "template": "404",
+    "type":     "text"
+}

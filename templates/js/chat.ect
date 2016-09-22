@@ -1,0 +1,75 @@
+/** Socket */
+var socket = sio.socket.of('/chat');
+socket
+.on('connect', function () {
+})
+.on('connected', function (data) {
+  ShowMessageForm (data.login);
+})
+.on('notconnected', function (data) {
+  ShowLoginForm (data.error);
+})
+.on('join', function (data){
+  addMessage(data.who, 'joined room', data.when);
+})
+.on('bye', function (data){
+  addMessage(data.who, 'left room', data.when);
+})
+.on('error', function (error) {
+  alert('Error: ' + error);
+})
+.on('message', function (data){
+  addMessage(data.who, data.what, data.when);
+});
+
+/** Form */
+var currentMode;
+<% if @username : %>
+ShowMessageForm (<%- @username %>);
+<% else : %>
+ShowLoginForm (null);
+<% end %>
+
+/** Display */
+var messagesArea = document.getElementById('messages');
+function addMessage(username, message, time) {
+  if (typeof time != 'string') {
+    var date = new Date(time);
+    time = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+  }
+  var line = '';
+  line = line + '<li class="clearfix"><div class="chat-body clearfix">';
+  line = line + '<div class="header"><strong>' + username + '</strong>';
+  line = line + '<small class="pull-right text-muted">'+time+'</small></div>'
+  line = line + '<p>' + message + '</p>';
+  line = line + '</div></li>';
+  //var line = '[' + time + '] <strong>' + username + '</strong>: ' + message + '<br />';
+  messagesArea.innerHTML = messagesArea.innerHTML+line;
+}
+function ShowLoginForm (error)
+{
+  document.getElementById('chatTitle').innerHTML = '<p>Not connected <% if @error : %><strong>'+error+'</strong><% end %></p>';
+  var formContainer = document.getElementById('message-form');
+  var form = ''
+      + '<input type="text" id="message-input" name="username" placeholder="Type your login" autofocus required<% if @username : %> value="<% @username %>"<% end %>>'
+      + '<input type="submit" value="Join">';
+  formContainer.innerHTML = form;
+  currentMode = 'join';
+}
+function ShowMessageForm (name)
+{
+  document.getElementById('chatTitle').innerHTML = '<p>Connected as <strong>'+name+'</strong></p>';
+  var formContainer = document.getElementById('message-form');
+  var form = ''
+      + '<input type="text" placeholder="Type your message" id="message-input" name="message" autofocus required>'
+      + '<input type="submit" value="OK">';
+  formContainer.innerHTML = form;
+  currentMode = 'write';
+}
+
+document.getElementById('message-form').onsubmit = function () {
+  var messageInput = document.getElementById('message-input');
+  socket.emit(currentMode, messageInput.value);
+  messageInput.value = '';
+  return false;
+}

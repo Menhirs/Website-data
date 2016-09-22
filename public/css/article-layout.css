@@ -1,0 +1,60 @@
+
+article.full {
+	min-width: 950px;
+	width: 950px;
+}
+
+article.quarter {
+	min-width: 226px;
+	width: 226px;
+}
+
+article.three-quarter {
+	min-width: 709px;
+	width: 709px;
+}
+
+article.third {
+	min-width: 306px;
+	width: 306px;
+}
+
+article.two-third {
+	min-width: 629px;
+	width: 629px;
+}
+
+article.half {
+	min-width: 467px;
+	width: 467px;
+}
+
+/***/
+
+
+article div.three-columns {
+	-moz-column-count: 3; /* Firefox */
+	-webkit-column-count: 3; /* Safari and Chrome */
+	column-count: 3;
+	-moz-column-rule: 1px solid #A3A3A3;
+	-webkit-column-rule: 1px solid #A3A3A3;
+	column-rule: 1px solid #A3A3A3;
+}
+
+article div.two-columns {
+	-moz-column-count: 2; /* Firefox */
+	-webkit-column-count: 2; /* Safari and Chrome */
+	column-count: 2;	
+	-moz-column-rule: 1px solid #A3A3A3;
+	-webkit-column-rule: 1px solid #A3A3A3;
+	column-rule: 1px solid #A3A3A3;
+}
+
+article div.mono-column {
+	-moz-column-count: 1; /* Firefox */
+	-webkit-column-count: 1; /* Safari and Chrome */
+	column-count: 1;	
+	-moz-column-rule: 1px solid #A3A3A3;
+	-webkit-column-rule: 1px solid #A3A3A3;
+	column-rule: 1px solid #A3A3A3;
+}

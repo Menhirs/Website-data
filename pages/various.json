@@ -1,0 +1,11 @@
+{
+    "id":       "various",
+    "title":    "Canvas demo",
+    "template": "canvas",
+    "columns":  0,
+    "articles": [
+    ],
+    "scripts": [
+        "js/basic-canvas.js"
+    ]
+}

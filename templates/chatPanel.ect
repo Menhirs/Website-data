@@ -1,0 +1,86 @@
+
+<style>
+.chatHeader {
+  color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    padding: 1px 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 22px;
+}
+.chatHeader p {
+font-size: 0.75em;
+    margin-top: 4px;
+}
+.chatContent {
+    height: calc(100vh - 100px - 50px - 40px - 10px - 200px - 48px);
+}
+.chatContent .inner {
+    height: calc(100vh - 100px - 50px - 40px - 10px - 200px - 48px);
+}
+
+.chatFooter {
+    height: 22px;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    padding: 1px 5px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#message-form {
+    padding-top: 1px;
+    padding-left: 5px;
+}
+#message-form input {
+    margin-right: 2px;
+}
+#message-input {
+    width: 85%;
+}
+
+.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+    text-align: justify;
+}
+.chat li {
+    margin-bottom: 2px;
+}
+.chat li .chat-body {
+}
+.chat li .chat-body p {
+    margin: 0;
+    color: #777777;
+}
+.pull-right {
+    float: right!important;
+}
+.text-muted {
+    color: #777;
+}
+.small, small {
+    font-size: 85%;
+}
+</style>
+  <div id="chatTitle" class="chatHeader"><p><% if @username : %>
+Logged as <%- @username %> in <%- @room %>
+<% else : %>
+Not logged
+<% end %>
+</p></div>
+  <div class="chatContent noscrollcontainer">
+    <div class="inner scrollcontainer">
+    <ul id="messages" class="chat"></ul>
+    </div>
+  </div>
+  <div id="chatTools" class="chatFooter">
+    <form method="post" id="message-form">
+    </form>
+  </div>
+
+<script type="text/javascript">
+<% include 'js/chat' %>
+</script>
