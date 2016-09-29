@@ -2,5 +2,8 @@
     "id":       "no-content",
     "title":    "Content not found",
     "template": "nocontent",
-    "type":     "text"
+    "type":     "text",
+    "text":     [
+        "Aucun contenu disponible pour cet article"
+    ]
 }

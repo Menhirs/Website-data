@@ -1,0 +1,8 @@
+{
+    "id":       "robotique-materiels",
+    "title":    "Liste du matériel disponible",
+    "template": "robotique-materiels",
+    "type":     "text",
+    "text": [
+    ]
+}

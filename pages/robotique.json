@@ -2,9 +2,11 @@
     "id":       "robotique",
     "title":    "Actions autour de la robotique",
     "template": "",
-    "columns":  2,
+    "columns":  1,
     "articles": [
-        "robotique-materiels"
+        "robotique-description",
+        "robotique-materiels",
+        "nxt-linux"
     ],
     "scripts": [
     ]

@@ -1,0 +1,19 @@
+{
+    "id":       "robotique-description",
+    "title":    "Description des actions autour de la robotique",
+    "template": "robotique-description",
+    "type":     "text",
+    "text": [
+        "<p>Les actions autour de la robotique s'appuient notamment sur les enseignements dispensés dans les formations de Master du département Informatique :</p>",
+        "<ul>",
+        "<li>application d'algorithmes d'intelligence artificielle</li>",
+        "<li>techniques de vision par ordinateur</li>",
+        "</ul>",
+        "<p>D'autres actions plus grand public s'appuient sur la participation à différentes manifestations :</p>",
+        "<ul>",
+        "<li>Fête de la science</li>",
+        "<li>Portes ouvertes</li>",
+        "<li>fhacktory</li>",
+        "</ul>"
+    ]
+}

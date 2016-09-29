@@ -2,5 +2,8 @@
     "id":       "404",
     "title":    "404 error",
     "template": "404",
-    "type":     "text"
+    "type":     "text",
+    "text":     [
+        "Le contenu que vous recherchez n'est pas encore disponible."
+    ]
 }

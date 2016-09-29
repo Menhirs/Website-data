@@ -1,0 +1,65 @@
+<div class="article_title">Lego mindstorm NXT sous Linux</div>
+<div class="article_content">
+<div class="article_subtitle">Préparation de la connection USB</div>
+<p>Sous Linux, il sera nécessaire de recompiler la bibliothèque JNI d'accès au module NXT. Pour cela, il faut installer la suite de dévellopement pour les périphériques USB</p>
+<pre>sudo apt-get install libusb-dev</pre></p>
+<p>Afin de permettre à un utilisateur de communiquer en lecture/écriture avec la brique NXT, il est nécessaire de lui donner les droits d'accès sur le périphérique :</p>
+<ul>
+<li>Créer (en mode <em>root</em>) un fichier <em>/etc/udev/rules.d/70-lego.rules</em> qui contiendra les lignes suivantes :
+<pre>
+# Lego NXT brick in normal mode
+SUBSYSTEM=="usb", DRIVER=="usb", ATTRS{idVendor}=="0694", ATTRS{idProduct}=="0002", GROUP="lego", MODE="0660"
+# Lego NXT brick in firmware update mode (Atmel SAM-BA mode)
+SUBSYSTEM=="usb", DRIVER=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="6124", GROUP="lego", MODE="0660"
+</pre>
+</li>
+<li>Créer un groupe d'utilisateur lego : <pre>sudo groupadd lego</pre></li>
+<li>Ajouter votre compte utilisateur au groupe lego : <pre>sudo gpasswd -a <username> lego</pre></li>
+<li>Recharger les rêgles d'accès aux périphériques : <pre>sudo udevadm control --reload-rules</pre></li>
+</ul>
+<div class="article_subtitle">Installation logicielle</div>
+<ul>
+<li>Afin de programmer sur les mindstorm, il est nécessaire d'avoir une version particulière (32 bits) d'Eclipse.
+Pour ne pas géner les potentielles installllations que vous auriez fait précédemment, commencez par créer, dans votre compte, un répertoire <em>LegoNXT</em>.
+Il servira de base aux installations nécessaires pour les mindstorms</li>
+<li>Récupérer l'archive de la version 32 bits du <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">JDK</a>.
+A l'heure actuelle, il s'agit du fichier jdk-8u101-linux-i586.tar.gz (linux x86).
+Décompresser le fichier dans le répertoire <em>LegoNXT/Java</em></li>
+<li>Récupérer la version 32 bits de <em>Eclipse IDE for Java Developers</em> (sur cette <a href="https://eclipse.org/downloads/eclipse-packages/">page</a>).
+Décompresser l'achive dans le répertoire <em>LegoNXT/Eclipse</em></li>
+<li>Récupérer la version 9.1 beta 3 de Lejos (fichier leJOS_NXJ_0.9.1beta-3.tar.gz) disponible <a href="https://sourceforge.net/projects/nxt.lejos.p/files/0.9.1beta-3/">ici</a>.
+Décompresser l'achive dans le répertoire <em>LegoNXT/Lejos</em></li>
+<li>Ouvrir un terminal
+<ul>
+<li>Aller dans le répertoire LegoNXT/Lejos/build/libnxt</li>
+<li>Compiler le tout avec la commande <em>make</em></li>
+<li>Recopier le fichier libjlibnxt.so dans le répertoire LegoNXT/Lejos/lib/pc/native/linux/x86_64</li>
+<li>Fermer le terminal</li>
+</ul>
+</ul>
+<div class="article_subtitle">Configuration de Eclipse</div>
+Pour installer le plugin Lejos pour Eclipse
+    <ul>
+    <li>Dans un terminal, aller dans le répertoire LegoNXT/Eclipse.Taper la commande : <em>./eclipse -vm ../Java/bin</em></li>
+    <li>Dans Eclipse, menu <em>help</em>, sous-menu <em>Install New Software</em></li>
+    <li>Dans la boite de dialogue qui s'ouvre, saisir <em>http://www.lejos.org/tools/eclipse/plugin/nxj/</em> dans le champs <em>work with</em> et valider (via la touche Entrée ou le bouton Add).</li>
+    <li>Sélectionner (case à cocher) <em>lejos NXJ plugin</em> puis cliquer sur Next.</li>
+    <li>Cliquer sur Ok lorsque Eclipse vous prévient que le plugin n'est pas signé.</li>
+    <li>A la fin de l'installation, sélectionner <em>Restart now</em></li>
+    <li>Une fois Eclipse redémarré, si tout s'est bien passé, vous devriez avoir un nouveau menu <em>leJOS NXJ</em></li>
+    <li>Ouvrez les préférences Eclipse, puis sélectionnez <em>leJOS NXJ</em></li>
+    <li>sélectionner le répertoire d'installation de lejos (normallement LegoNXT/Lejos) dans le champs NXJ_HOME</li>
+    <li>dans connection type, choisir USB</li>
+    <li>cliquer sur <em>Apply</em> puis <em>Ok</em></li>
+    <li>Quitter Eclipse</li>
+    </ul>
+<div class="article_subtitle">Préparation de la brique NXT</div>
+    <ul>
+    <li>Brancher la brique en USB sur le PC</li>
+    <li>Allumer la brique</li>
+    <li>Dans un terminal, aller dans le répertoire LegoNXT/Eclipse.Taper la commande : <em>./eclipse -vm ../Java/bin</em></li>
+    <li>Dans eclipse, menu <em>leJOS NXJ / Upload firmware</em>
+    <li>Cliquer sur le bouton <em>Flash lejos firmware</em></li>
+    <li>Valider via Ok les différents messages</li>
+    </ul>
+</div>

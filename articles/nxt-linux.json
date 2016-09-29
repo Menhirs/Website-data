@@ -1,0 +1,8 @@
+{
+    "id":       "nxt-linux",
+    "title":    "Lego mindstorm NXT sous Linux",
+    "template": "nxt-linux",
+    "type":     "text",
+    "text": [
+    ]
+}
