@@ -2,7 +2,7 @@
 <div class="article_content">
 <div class="article_subtitle">Préparation de la connection USB</div>
 <p>Sous Linux, il sera nécessaire de recompiler la bibliothèque JNI d'accès au module NXT. Pour cela, il faut installer la suite de dévellopement pour les périphériques USB</p>
-<pre>sudo apt-get install libusb-dev</pre></p>
+<pre>sudo apt-get install libusb-dev ant openjdk-8-jdk</pre></p>
 <p>Afin de permettre à un utilisateur de communiquer en lecture/écriture avec la brique NXT, il est nécessaire de lui donner les droits d'accès sur le périphérique :</p>
 <ul>
 <li>Créer (en mode <em>root</em>) un fichier <em>/etc/udev/rules.d/70-lego.rules</em> qui contiendra les lignes suivantes :
@@ -14,7 +14,7 @@ SUBSYSTEM=="usb", DRIVER=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="612
 </pre>
 </li>
 <li>Créer un groupe d'utilisateur lego : <pre>sudo groupadd lego</pre></li>
-<li>Ajouter votre compte utilisateur au groupe lego : <pre>sudo gpasswd -a <username> lego</pre></li>
+<li>Ajouter votre compte utilisateur au groupe lego : <pre>sudo gpasswd -a &lt;username&gt; lego</pre></li>
 <li>Recharger les rêgles d'accès aux périphériques : <pre>sudo udevadm control --reload-rules</pre></li>
 </ul>
 <div class="article_subtitle">Installation de leJOS</div>
